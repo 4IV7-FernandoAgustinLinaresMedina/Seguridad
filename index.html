@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" style="text-align: center;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Cifrado_DES</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="background: var(--bs-body-color);">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/tripledes.js"></script>
+
+    <div class="cifrar" style="text-align: center;padding: 201px;">
+        <header style="color: var(--bs-pink);">
+            <h1 style="text-align: center;border-color: var(--bs-indigo);">Cifrado DES</h1>
+        </header>
+        <p style="margin: 12px;padding: 15px;text-align: center;color: var(--bs-code-color);">De preferencia ingrese un archivo con terminación .txt</p>
+        <p style="color: var(--bs-pink);">Advertencia: Si quiere descifrar un archivo ya cifrado solo tendra que subir el archivo y oprimir el boton de descifrar</p>
+        <form><input class="form-control" type="file" id="archivo" oninput="leerarchivo()" style="background: var(--bs-border-color-translucent);color: var(--bs-pink);">
+            <p style="border-color: var(--bs-pink);background: var(--bs-border-color-translucent);color: var(--bs-pink);">Ingrese una contraseña para poder cifrar y descifrar que sea de 8 caracteres</p><input class="form-control" type="password" id="clavedes" maxlength="8" minlength="8" placeholder="Contreseña" style="background: var(--bs-border-color-translucent);text-align: center;color: var(--bs-pink);">
+            <div>
+                <input class="form-control" type="button" id="boton" value="Cifrar" onclick="cifrarDES()"  style="margin-right:1.5rem">
+                <input class="form-control" type="button" id="boton" value="Descifrar" onclick="descifrarDES()"   style="margin-right:1.5rem"> 
+
+                <p id="txtDes"></p> 
+            </div>
+        </form>
+        <br>
+        <br>
+        <footer>
+            <p style="color: var(--bs-pink);text-align: left;">Linares Medina Fernando Agustin</p>
+            <p style="color: var(--bs-pink);text-align: left;">5IV7_SWyA</p>
+        </footer>
+    </div>
+    
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/des.js"></script>
+</body>
+
+</html>
